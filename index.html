@@ -40,7 +40,7 @@ xmlhttp1.onreadystatechange=function()
     document.getElementById("a1").innerHTML=xmlhttp1.responseText;
     }
   }
-xmlhttp1.open("GET","http://gordoncollegeccs.edu.ph/ccswebsite/cms/user.php?q="+str,true);
+xmlhttp1.open("GET","http://gordoncollegeccs.edu.ph/ccswebsite/cms/portal.php?q="+str,true);
 xmlhttp1.send();
 }
 	
@@ -58,12 +58,12 @@ xmlhttp1.send();
 <!--Front Page-->
 <div data-role="page" data-theme="a" id="first" class="content">
  <div data-role="header" data-theme="b" div style="min-height: 90px;" align="center" >
-<div id="content" data-theme="a"><img src="images/header.png" height="130" width="400"></div>
+<div id="content" data-theme="a"><img src="images/header1.png" height="150" width="430"></div>
 </div>
 
 <div data-role="content" align="center" data-theme="c">
 </br></br></br></br>
-	<img src="images/cap1.png" height="550" width="550" id="pics">
+	<img src="images/cap1.png" height="550" width="600" id="pics">
 	
 	
 		</br></br></br>
@@ -82,16 +82,21 @@ xmlhttp1.send();
 <!--Main Page-->
 <div data-role="page" data-theme="e" id="main">
  <div data-role="header" data-theme="b" div style="min-height: 130px;" align="center" data-position="fixed" data-position="fixed">
-  <a href="#first" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true" data-transition="flow"><font size="5">Home</font></a>
+  <a href="#first" data-role="button" data-theme="c" data-icon="arrow-l" data-iconpos="left" data-inline="true" data-transition="flow"><font size="5">Home</font></a>
 <img src="images/header.png" height="130" width="500">
 </div>
   <div data-role="content">
-  
-  <div data-role="controlgroup" data-type="horizontal" align="center" id="content">
-    <a href="#panel1" data-role="button" data-theme="c" class="my-buttonssss"><font size="5px">My College</font></a>
-    <a href="#cms" data-role="button" data-theme="c" class="my-buttonsss" data-transition="flip"><font size="5px">UPDATES</font></a>
-    <a href="http://www.gordoncollegeccs.edu.ph/ccswebsite/student/index.html" data-role="button" data-theme="c" class="my-buttonss"><font size="5px">Grades</font></a>
+<div data-role="footer" align="center">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#panel1" data-theme="c" class="navbut" data-icon="info" data-iconpos="top"><font size="5">My College</font></a></li>
+			<li><a href="#cms" data-theme="c" class="navbut" data-icon="gear" data-iconpos="top"><font size="5">Announcements</font></a></li>
+			<li><a href="http://gordoncollegeccs.edu.ph/ccswebsite/student/index.html" data-theme="c" class="navbut" data-icon="star" data-iconpos="top"><font size="5"> Student Portal</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
 </div>
+
+
 </br>
 <span id="sl_play" class="sl_command">&nbsp;</span>
 	<span id="sl_pause" class="sl_command">&nbsp;</span>
@@ -121,19 +126,19 @@ xmlhttp1.send();
 			<div class="c_slider"></div>
 			<div class="slider">
 				<figure>
-					<img src="img/dummy-640x310-1.jpg" alt="" width="640" height="310" />
+					<img src="img/dummy-640x310-1.jpg" alt="" width="650" height="310" />
 					<figcaption>GC-CCS Clubs. Be one of them !!!</figcaption>
 				</figure><!--
 				--><figure>
-					<img src="img/dummy-640x310-2.jpg" alt="" width="640" height="310" />
+					<img src="img/dummy-640x310-2.jpg" alt="" width="650" height="310" />
 					<figcaption>Gordon College CCS Lanyard. Get yours now !!!</figcaption>
 				</figure><!--
 				--><figure>
-					<img src="img/dummy-640x310-3.jpg" alt="" width="640" height="310" />
+					<img src="img/dummy-640x310-3.jpg" alt="" width="600" height="310" />
 					<figcaption></figcaption>
 				</figure><!--
 				--><figure>
-					<img src="img/dummy-640x310-4.jpg" alt="" width="640" height="310" />
+					<img src="img/dummy-640x310-4.jpg" alt="" width="650" height="310" />
 					<figcaption>Gordon College CCS Industry Partners.</figcaption>
 				</figure>
 			</div>
@@ -201,11 +206,14 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
     <div data-role="panel" id="panel1" data-theme="b">
  
       <div class="panel-content">
-	 <center><img src="images/ccss.png" height="140" width="180"></center>
-        <h1 align="center"><font size="5px" face="Century Gothic">MY COLLEGE</font></h1>
-         <a href="#vmg" data-role="button" data-theme="e" data-transition="flow"><font size="5px" face="Century Gothic">GC-CCS VMG</font></a></br></br>
-		  <a href="#courses" data-role="button" data-theme="e" data-transition="flow"><font size="5px" face="Century Gothic">Courses Offered</font></a></br></br>
-		   <a href="#admission" data-role="button" data-theme="e" data-transition="flow"><font size="5px" face="Century Gothic">Admission</font></a></br></br>
+	  </br><br>
+	 <center><img src="images/ccss.png" height="200" width="240"></center>
+	 </br></br>
+      
+         <a href="#popupNested1" data-rel="popup" data-role="button" data-transition="pop" data-theme="e" ><font size="5px" face="Century Gothic">GC-CCS VMG</font></a></br></br>
+		 
+		  <a href="#popupNested" data-rel="popup" data-role="button" data-transition="pop" data-theme="e" ><font size="5px" face="Century Gothic">Courses Offered</font></a></br></br>
+		   <a href="#popupNested2" data-rel="popup" data-role="button" data-transition="pop" data-theme="e" ><font size="5px" face="Century Gothic">Admission</font></a></br></br>
 		   
 		<!--<a href="#faculty" data-role="button" data-theme="e" data-transition="flow"><font size="5px" face="Century Gothic">GC-CCS Faculty</font></a></br></br>-->
 		 <a href="#calendar" data-role="button" data-theme="e" data-transition="flow"><font size="5px" face="Century Gothic">Academic Calendar</font></a></br></br>
@@ -217,7 +225,60 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
  
     </div><!-- /defaultpanel -->
 	
-	
+	<!--POP UP Course-->
+<div data-role="popup" id="popupNested" data-theme="none">
+    <div data-role="collapsible-set" data-theme="b" data-content-theme="c" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+        <div data-role="collapsible" data-inset="true" data-collapsed="false">
+            <h2>Courses</h2>
+            <ul data-role="listview">
+                <li><a href="#courses">ACT</a></li>
+                <li><a href="#bsit">BSIT</a></li>
+                <li><a href="#bscs">BSCS</a></li>
+               
+            </ul>
+        </div><!-- /collapsible -->
+       
+      
+    </div><!-- /collapsible set -->
+</div><!-- /popup -->
+<!--POP UP end-->
+
+
+<!--POP UP VMG-->
+<div data-role="popup" id="popupNested1" data-theme="none">
+    <div data-role="collapsible-set" data-theme="b" data-content-theme="c" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+        <div data-role="collapsible" data-inset="true" data-collapsed="false">
+            <h2>GC-CCS VMG</h2>
+            <ul data-role="listview">
+                <li><a href="#vmg">Vision</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#goals">Goals</a></li>
+               
+            </ul>
+        </div><!-- /collapsible -->
+       
+      
+    </div><!-- /collapsible set -->
+</div><!-- /popup -->
+<!--POP UP end-->
+
+<!--POP UP Admission-->
+<div data-role="popup" id="popupNested2" data-theme="none">
+    <div data-role="collapsible-set" data-theme="b" data-content-theme="c" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" style="margin:0; width:250px;">
+        <div data-role="collapsible" data-inset="true" data-collapsed="false">
+            <h2>Admission</h2>
+            <ul data-role="listview">
+                <li><a href="#admission">Requirements</a></li>
+                <li><a href="#procedure">Procedures</a></li>
+             
+               
+            </ul>
+        </div><!-- /collapsible -->
+       
+      
+    </div><!-- /collapsible set -->
+</div><!-- /popup -->
+<!--POP UP end-->
 	
 	 <div data-role="footer" data-position="fixed" data-theme="b">
 	<h1>Alrights Reserved 2013</h1>
@@ -371,14 +432,13 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 <img src="images/header.png" height="130" width="500">
 </div>
   <div data-role="content" align="center">
-  
-  
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#vmg" data-role="button" data-theme="c" class="my-buttonssss"><font size="5px">VISION</font></a>
-    <a href="#mission" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">MISSION</font></a>
-    <a href="#goals" data-role="button" data-theme="c" class="my-buttonss" data-transition="flow"><font size="5px">GOALS</font></a>	
-    </div>
-
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#vmg" data-theme="c" class="navbut" data-icon="gear" data-iconpos="top"><font size="5">VISION</font></a></li>
+			<li><a href="#mission" data-theme="c" class="navbut" data-icon="check" data-iconpos="top"><font size="5">MISSION</font></a></li>
+			<li><a href="#goals" data-theme="c" class="navbut" data-icon="bars" data-iconpos="top"><font size="5">GOALS</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
 </br></br>
 <div id="content"><img src="images/vision.png" height="950" width="630"></div>
 
@@ -392,7 +452,6 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
   <!--VMG end-->
   
   
-  
    <!--Mission-->
 <div data-role="page" data-theme="e" id="mission">
  <div data-role="header" data-theme="b" div style="min-height: 130px;" align="center" data-position="fixed">
@@ -400,14 +459,13 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 <img src="images/header.png" height="130" width="500">
 </div>
   <div data-role="content" align="center">
-  
-  
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#vmg" data-role="button" data-theme="c" class="my-buttonssss" data-transition="pop"><font size="5px">VISION</font></a>
-    <a href="#mission" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">MISSION</font></a>
-    <a href="#goals" data-role="button" data-theme="c" class="my-buttonss" data-transition="flow"><font size="5px">GOALS</font></a>	
-    </div>
-
+  <div data-role="navbar">
+		<ul>
+			<li><a href="#vmg" data-theme="c" class="navbut" data-icon="gear" data-iconpos="top"><font size="5">VISION</font></a></li>
+			<li><a href="#mission" data-theme="c" class="navbut" data-icon="check" data-iconpos="top"><font size="5">MISSION</font></a></li>
+			<li><a href="#goals" data-theme="c" class="navbut" data-icon="bars" data-iconpos="top"><font size="5">GOALS</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
 </br></br>
 <div id="content"><img src="images/mission.png" height="950" width="630"></div>
 
@@ -428,35 +486,26 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 <img src="images/header.png" height="130" width="500">
 </div>
   <div data-role="content" align="center">
-  
-  
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#vmg" data-role="button" data-theme="c" class="my-buttonssss" data-transition="pop"><font size="5px">VISION</font></a>
-    <a href="#mission" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">MISSION</font></a>
-    <a href="#goals" data-role="button" data-theme="c" class="my-buttonss" data-transition="flow"><font size="5px">GOALS</font></a>	
-    </div>
-
-
-
+ <div data-role="navbar">
+		<ul>
+			<li><a href="#vmg" data-theme="c" class="navbut" data-icon="gear" data-iconpos="top"><font size="5">VISION</font></a></li>
+			<li><a href="#mission" data-theme="c" class="navbut" data-icon="check" data-iconpos="top"><font size="5">MISSION</font></a></li>
+			<li><a href="#goals" data-theme="c" class="navbut" data-icon="bars" data-iconpos="top"><font size="5">GOALS</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
 </br>
 <div data-role="controlgroup" data-type="horizontal" align="center" >
     <a href="#goals" data-role="button" data-theme="c" class="my-buttonssss" data-transition="pop"><font size="5px">1</font></a>
     <a href="#goals1" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">2</font></a>
-
     </div>
 <div id="content"><img src="images/goals.png" height="950" width="600"></div>
-
-
 	 <div data-role="footer" data-position="fixed" data-theme="b">
 	<h1>Alrights Reserved 2013</h1>
 </div>
-	
-</div>
-  
+</div>  
   </div>
   
-  
-  
+
   <div data-role="page" data-theme="e" id="goals1">
  <div data-role="header" data-theme="b" div style="min-height: 130px;" align="center" data-position="fixed">
  <a href="#main" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true"><font size="5">Back</font></a>
@@ -465,12 +514,13 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
   <div data-role="content" align="center">
   
   
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#vmg" data-role="button" data-theme="c" class="my-buttonssss" data-transition="pop"><font size="5px">VISION</font></a>
-    <a href="#mission" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">MISSION</font></a>
-    <a href="#goals" data-role="button" data-theme="c" class="my-buttonss"><font size="5px">GOALS</font></a>	
-    </div>
-
+   <div data-role="navbar">
+		<ul>
+			<li><a href="#vmg" data-theme="c" class="navbut" data-icon="gear" data-iconpos="top"><font size="5">VISION</font></a></li>
+			<li><a href="#mission" data-theme="c" class="navbut" data-icon="check" data-iconpos="top"><font size="5">MISSION</font></a></li>
+			<li><a href="#goals" data-theme="c" class="navbut" data-icon="bars" data-iconpos="top"><font size="5">GOALS</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
 </br>
 <div data-role="controlgroup" data-type="horizontal" align="center" >
     <a href="#goals" data-role="button" data-theme="c" class="my-buttonssss" data-transition="pop"><font size="5px">1</font></a>
@@ -488,7 +538,6 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
   
   </div>
   <!--goals end-->
-  
    <!--Courses Offered-->
 <div data-role="page" data-theme="e" id="courses">
  <div data-role="header" data-theme="b" div style="min-height: 130px;" align="center" data-position="fixed">
@@ -496,22 +545,19 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 <img src="images/header.png" height="130" width="500">
 </div>
   <div data-role="content" align="center">
-  
-  <h3 class="acad">COURSES OFFERED</h3>
-  
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#courses" data-role="button" data-theme="c" class="my-buttonssss"><font size="5px">ACT</font></a>
-    <a href="#bsit" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">BSIT</font></a>
-    <a href="#bscs" data-role="button" data-theme="c" class="my-buttonss" data-transition="flow"><font size="5px">BSCS</font></a>	
-    </div>
-	
+	 <div data-role="navbar">
+		<ul>
+			<li><a href="#courses" data-theme="c" class="navbut"><font size="5">ACT</font></a></li>
+			<li><a href="#bsit" data-theme="c" class="navbut"><font size="5">BSIT</font></a></li>
+			<li><a href="#bscs" data-theme="c" class="navbut"><font size="5">BSCS</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
+	<br><br>
 	<div id="content"><img src="images/act.png" height="1100" width="650"></div>
 	 <div data-role="footer" data-position="fixed" data-theme="b">
 	<h1>Alrights Reserved 2013</h1>
+</div>	
 </div>
-	
-</div>
-  
   </div>
   
  
@@ -522,14 +568,16 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 </div>
   <div data-role="content" align="center">
   
-  <h3 class="acad">COURSES OFFERED</h3>
+
   
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#courses" data-role="button" data-theme="c" class="my-buttonssss"><font size="5px">ACT</font></a>
-    <a href="#bsit" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">BSIT</font></a>
-    <a href="#bscs" data-role="button" data-theme="c" class="my-buttonss" data-transition="flow"><font size="5px">BSCS</font></a>	
-    </div>
-	
+     <div data-role="navbar">
+		<ul>
+			<li><a href="#courses" data-theme="c" class="navbut"><font size="5">ACT</font></a></li>
+			<li><a href="#bsit" data-theme="c" class="navbut"><font size="5">BSIT</font></a></li>
+			<li><a href="#bscs" data-theme="c" class="navbut"><font size="5">BSCS</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
+	<br><br>
 	<div id="content"><img src="images/bsit.png" height="1100" width="650"></div>
 	
 	 <div data-role="footer" data-position="fixed" data-theme="b">
@@ -540,8 +588,7 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
   
   </div>
   
-  
-  
+ 
    <div data-role="page" data-theme="e" id="bscs">
  <div data-role="header" data-theme="b" div style="min-height: 130px;" align="center" data-position="fixed">
  <a href="#main" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true"><font size="5">Back</font></a>
@@ -549,14 +596,16 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 </div>
   <div data-role="content" align="center">
   
-  <h3 class="acad">COURSES OFFERED</h3>
+ 
   
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#courses" data-role="button" data-theme="c" class="my-buttonssss"><font size="5px">ACT</font></a>
-    <a href="#bsit" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">BSIT</font></a>
-    <a href="#bscs" data-role="button" data-theme="c" class="my-buttonss" data-transition="flow"><font size="5px">BSCS</font></a>	
-    </div>
-	
+     <div data-role="navbar">
+		<ul>
+			<li><a href="#courses" data-theme="c" class="navbut"><font size="5">ACT</font></a></li>
+			<li><a href="#bsit" data-theme="c" class="navbut"><font size="5">BSIT</font></a></li>
+			<li><a href="#bscs" data-theme="c" class="navbut"><font size="5">BSCS</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
+	</br></br>
 	<div id="content"><img src="images/bscs.png" height="1100" width="650"></div>
 	
 	 <div data-role="footer" data-position="fixed" data-theme="b">
@@ -621,7 +670,7 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
       <!--About-->
 <div data-role="page" data-theme="e" id="about">
  <div data-role="header" data-theme="b" div style="min-height: 130px;" align="center" data-position="fixed">
- <a href="#first" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Back</a>
+<a href="#main" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true" data-transition="flow"><font size="5">Back</font></a>
 <img src="images/header.png" height="130" width="500">
 </div>
   <div data-role="content" align="center">
@@ -642,7 +691,7 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
   
   <div data-role="page" data-theme="e" id="team">
  <div data-role="header" data-theme="b" div style="min-height: 130px;" align="center" data-position="fixed">
- <a href="#main" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Back</a>
+ <a href="#about" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true" data-transition="flip>Back</a>
 <img src="images/header.png" height="130" width="500">
 </div>
   <div data-role="content" align="center">
@@ -668,13 +717,16 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
   <div data-role="content" align="center">
   
   
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#admission" data-role="button" data-theme="c" class="my-buttonsssszz"><font size="5px">Requirements</font></a>
-    <a href="#procedure" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">Procedures</font></a>
-   
-    </div>
-	</br></br>
+    <div data-role="navbar">
+		<ul>
+			<li><a href="#admission" data-theme="c" class="navbut" data-icon="check" data-iconpos="top"><font size="5">Requirements</font></a></li>
+			<li><a href="#procedure" data-theme="c" class="navbut" data-icon="bars" data-iconpos="top"><font size="5">Procedures</font></a></li>
+			
+		</ul>
+	</div><!-- /navbar -->
+	</br>
 	<div id="content"><img src="images/admission.png" height="1100" width="650"></div>
+	
 	 <div data-role="footer" data-position="fixed" data-theme="b">
 	<h1>Alrights Reserved 2013</h1>
 </div>
@@ -693,11 +745,13 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
   <div data-role="content" align="center">
   
   
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-    <a href="#admission" data-role="button" data-theme="c" class="my-buttonsssszz"><font size="5px">Requirements</font></a>
-    <a href="#procedure" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">Procedures</font></a>
-   
-    </div>
+    <div data-role="navbar">
+		<ul>
+			<li><a href="#admission" data-theme="c" class="navbut" data-icon="check" data-iconpos="top"><font size="5">Requirements</font></a></li>
+			<li><a href="#procedure" data-theme="c" class="navbut" data-icon="bars" data-iconpos="top"><font size="5">Procedures</font></a></li>
+			
+		</ul>
+	</div><!-- /navbar -->
 	</br>
 	<div id="content"><img src="images/procedure1.png" height="1100" width="650"></div>
 	 <a href="#procedure1" data-role="button" data-theme="c" class="my-buttonsssz" data-transition="flip"><font size="5px">Next</font></a>
@@ -758,12 +812,16 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 </div>
   <div data-role="content" align="center">
   
-  
-     <div data-role="controlgroup" data-type="horizontal" align="center" >
-       <a href="#main" data-role="button" data-theme="c" class="my-buttonssss"><font size="5px">Home</font></a>
-    <a href="#cms" data-role="button" data-theme="c" class="my-buttonsss" data-transition="flip"><font size="5px">UPDATES</font></a>
-    <a href="website.html" data-role="button" data-theme="c" class="my-buttonss"><font size="5px">Grades</font></a>
-    </div>
+  <div data-role="footer" align="center">		
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#main" data-theme="c" class="navbut" data-icon="info" data-iconpos="top"><font size="5">Home</font></a></li>
+			<li><a href="#cms" data-theme="c" class="navbut" data-icon="gear" data-iconpos="top"><font size="5">Announcements</font></a></li>
+			<li><a href="http://gordoncollegeccs.edu.ph/ccswebsite/student/index.html" data-theme="c" class="navbut" data-icon="star" data-iconpos="top"><font size="5"> Student Portal</font></a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div>
+
 
 	
 	<div id="a1">UPDATES</div>
@@ -776,7 +834,7 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 	
 </div>
   
-  </div>
+ 
 
 
 
@@ -784,7 +842,7 @@ located at Old Hospital Road East Tapinac, Olongapo City, Philippines. As of now
 
 
 
-
+</div>
 
 </body>
 </html>
